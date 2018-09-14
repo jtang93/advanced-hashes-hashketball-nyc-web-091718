@@ -94,3 +94,14 @@ def big_shoe_rebounds
   end
   rebounds
 end
+
+def num_to_name(player_num)
+  game_has.each do |home_away, keys|
+    keys[:players].each do |player|
+      if player[:number] == player_num
+        return player[:player_name]
+      end
+    end
+  end
+end
+
